@@ -1,0 +1,55 @@
+/* ! USER normalizer // Пользовательский нормализатор*/
+/* Lists // Списки */
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none; /* remove bullets in lists // 
+    убрать маркеры в списках */
+}
+
+/* Paragraphs // Абзацы */
+p {
+    margin: 0;
+}
+
+/* images // картинки */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* links // ссылки */
+a {
+    color: inherit; 
+    text-decoration: none; /* remove the underline in links // 
+    убрать подчеркивание в ссылках */
+    transition: color var(--duration-animation) var(--timing-animation);
+}
+
+/*! ---------------------------------------------------- */
+
+/* ! Constants // Константы */
+
+/* fonts constants // константы шрифтов*/
+body,
+address {
+    font-family: var(--primary-font-family);
+    font-style: normal;
+    letter-spacing: 0.03em;
+
+    color: var(--primary-text-color);
+    background-color: var(--background-color-white);
+}
+
+/* Headings // Заголовки */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--title-text-color);
+    margin: 0;
+}

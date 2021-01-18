@@ -1,0 +1,192 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-color: var(--backdrop);
+  transition: all 250ms ease-out;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    .modal {
+      transform: translate(-50%, -50%) scale(0);
+    }
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 530px;
+  min-height: 581px;
+  background-color: var(--background-color-white);
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms linear;
+  padding: 40px;
+
+  &-button {
+    min-width: 200px;
+    height: 50px;
+    padding: 10px 32px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 4px;
+    @include font(16px, 700, 30px, 0.06em);
+    text-align: center;
+
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+    cursor: pointer;
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+
+    &-field {
+      margin-bottom: 10px;
+      color: var(--primary-text-color);
+      @include font(12px, 400, 14px, 0.01em);
+    }
+
+    &-comment {
+      width: 100%;
+      height: 120px;
+      resize: none;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      border-radius: 4px;
+      padding: 12px 16px;
+      margin-top: 4px;
+      transition: var(--duration-animation) var(--timing-animation);
+
+      &:focus {
+        outline: none;
+        border-color: var(--accent-color);
+      }
+    }
+
+    &-input {
+      width: 100%;
+      height: 40px;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      border-radius: 4px;
+      padding-left: 42px;
+      transition: var(--duration-animation) var(--timing-animation);
+
+      &:focus {
+        outline: none;
+        border-color: var(--accent-color);
+
+        & + .form-icon {
+          fill: var(--accent-color);
+        }
+      }
+    }
+
+    &-btn {
+      display: block;
+      width: 200px;
+      height: 50px;
+      padding: 10px 32px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      border: none;
+      border-radius: 4px;
+      @include font(16px, 700, 30px, 0.06em);
+      text-align: center;
+      color: var(--primary-white-color);
+      background-color: var(--accent-color);
+      cursor: pointer;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+  }
+
+  &-policy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include font(14px, 400, 24px, 0.03em);
+    font-style: normal;
+    color: var(--primary-text-color);
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 15px;
+      border: 1px solid #212121;
+      margin-right: 7px;
+      border-radius: 2px;
+
+      .modal-policy-checkbox:checked + & {
+        background-color: var(--accent-color);
+        background-image: url("../img/modal/icon_check.svg");
+        background-position: center;
+        border: 1px solid var(--accent-color);
+      }
+    }
+  }
+}
+
+.form-title {
+  margin-bottom: 12px;
+  @include font(20px, 700, 23px, 0.03em);
+  text-align: center;
+  color: var(--title-text-color);
+}
+
+.form-input-wrapper {
+  position: relative;
+  display: block;
+  margin-top: 4px;
+}
+
+.form-icon {
+  position: absolute;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  transition: var(--duration-animation) var(--timing-animation);
+
+  &:hover {
+    fill: var(--accent-color);
+  }
+}
+
+.form-link {
+  @include font(14px, 400, 24px, 0.03em);
+  text-decoration-line: underline;
+  text-decoration-skip-ink: none;
+  color: #2196f3;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--color-border-close);
+  border-radius: 50%;
+  background-color: var(--background-color-white);
+  cursor: pointer;
+}
+
+.close-icon {
+  fill: var(--title-text-color);
+  transition: transform var(--duration-animation) var(--timing-animation);
+
+  .close-btn:hover > &,
+  .close-btn:focus > & {
+    fill: var(--accent-color);
+  }
+}

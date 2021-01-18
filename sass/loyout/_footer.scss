@@ -1,0 +1,106 @@
+.footer {
+    background-color: var(--background-color-dark);
+    padding: 60px 0;
+    
+    .conteiner {
+    display: flex;
+    align-items: baseline; 
+    }
+    
+    &--baseline {
+    display: flex;
+    align-items: baseline;
+    }
+    
+    &-address {
+    margin-top: 20px;
+    @include font(14px, 400, 24px, 0.03em);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color-dark);
+    
+        &__contact{
+        color: #ffffff;
+        margin-bottom: 9px;
+        }
+    }
+    
+    &-contact {
+    min-width: 231px;
+    
+        &__email {
+        margin-bottom: 9px;
+        }
+    
+        &__email,
+        &__tell {
+        color: rgba(255, 255, 255, 0.6);
+        }
+    }
+}
+
+.subscription {
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+    width: 206px;
+    
+    &-title {
+    margin-bottom: 20px;
+    @include font(14px, 700, 16px, 0.03em);
+    text-transform: uppercase;
+    color: var(--primary-white-color);
+    }
+    
+    &-wrapper {
+    width: 570px;
+    margin-left: 93px;
+    }
+    
+    &-slogan {
+    margin-bottom: 20px;
+    @include font(14px, 700, 16px, 0.03em);
+    text-transform: uppercase;
+    color: var(--primary-white-color);
+    }
+    
+    &-icon {
+    min-width: 24px;
+    min-height: 24px;
+    margin-left: 10px;
+    }
+    
+    &-btn {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 200px;
+    height: 50px;
+    padding: 10px 29px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 4px;
+    @include font(16px, 700, 30px, 0.06em);
+    text-align: center;
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+    cursor: pointer;
+    margin-left: 12px;
+    }
+}
+
+.footer-form {
+    display: flex;
+    flex-direction: row;
+}
+
+.email-input {
+    width: 358px;
+    height: 50px;
+    padding-left: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+}

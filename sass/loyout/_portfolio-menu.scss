@@ -1,0 +1,42 @@
+.filter .conteiner {
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-subtitle__menu {
+    @include font(16px, 500, 26px, 0.03em);
+    text-align: center;
+
+    display: flex;
+    margin-top: 94px;
+    margin-bottom: 55px;
+    justify-content: center;
+}
+
+.portfolio-subtitle__item {
+    color: var(--title-text-color);
+    line-height: 2;
+    
+    &:not(:last-child) {
+    margin-right: 30px;
+    }
+}
+
+.portfolio__button {
+    padding: 6px 22px;
+    @include font(16px, 500, 26px, 0.03em);
+    min-width: 73px;
+    color: var(--title-text-color);
+    background-color: var(--portfolio-button-background-color);
+    
+    &.current,
+    &:hover,
+    &:focus {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+    box-shadow: 
+    0px 3px 1px rgba(0, 0, 0, 0.1), 
+    0px 1px 2px rgba(0, 0, 0, 0.08), 
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
