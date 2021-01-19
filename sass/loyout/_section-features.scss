@@ -21,7 +21,6 @@
     
     &-text {
     @include font(14px, 400, 24px, 0.03em);
-    line-height: 1.714;
     color: var(--primary-text-color);
     }
     
@@ -33,12 +32,11 @@
     background-repeat: no-repeat;
     background-position: center;
     background-color: var(--secondary-background-color);
-    
-        &:not(:last-child) {
-        margin-right: 30px;
-        }
     }
     
+    &__item:not(:last-child) {
+    margin-right: 30px;
+    }
 }
 
 .icon-antenna::before {
